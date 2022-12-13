@@ -1,12 +1,12 @@
 <template>
-    <canvas ref="canvasRef" style="width:640px;height:480px;"></canvas>
+    <div ref="divRef" style="width:640px;height:480px;"></div>
 </template>
 <script setup lang="ts">
 import { vrmLoader } from '~~/lib/vrm'
 import { onMounted, ref } from 'vue'
 
-const canvasRef = ref()
+const divRef = ref()
 onMounted(() => {
-    vrmLoader(canvasRef)
+    vrmLoader(divRef)
 })
 </script>
